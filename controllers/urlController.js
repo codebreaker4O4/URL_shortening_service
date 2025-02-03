@@ -5,10 +5,10 @@ const URL = require("../models/urlModel");
 exports.shortenURL = async (req, res) => {
   const { longUrl } = req.body;
   const shortCode = shortid.generate();
-  const newUrl = new URL({ shortcode, longUrl });
+  const newUrl = new URL({ shortCode, longUrl });
 
   await newUrl.save();
-  res.json({ shortUrl: `http://localhost:3000${shortCode}` });
+  res.json({ shortUrl: `http://localhost:3000/${shortCode}` });
 };
 
 //Redirect to original URL

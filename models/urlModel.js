@@ -2,7 +2,7 @@ const mongoose = require("mongoose"); //Import the mongoose module
 
 const urlSchema = new mongoose.Schema(
   {
-    shortcodes: String, //Unique short url
+    shortCode: String, //Unique short url
     longUrl: String, //Original long url
     accessCount: { type: Number, default: 0 }, //Number of accesses
   },
