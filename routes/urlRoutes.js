@@ -6,6 +6,6 @@ router.post("/shorten", urlController.shortenURL);
 router.get("/:shortCode", urlController.redirectURL);
 router.put("/update/:shortCode", urlController.updateURL);
 router.delete("/delete/:shortCode", urlController.deleteURL);
-router.get("/stats/:shortCode", urlController.getStats);
+router.get("/stats/:shortCode", urlController.getStatistics);
 
 module.exports = router;
